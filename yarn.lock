@@ -833,9 +833,10 @@
     lodash "^4.18.1"
     prerender-node "^3.8.3"
 
-"@homerjam/ace-dev-webpack@file:./.vendor/homerjam-ace-dev-webpack-1.0.0-beta.1.tgz":
+"@homerjam/ace-dev-webpack@^1.0.0-beta.1":
   version "1.0.0-beta.1"
-  resolved "file:./.vendor/homerjam-ace-dev-webpack-1.0.0-beta.1.tgz#8868874f2b54024a7515725f4a044070745f467f"
+  resolved "https://registry.yarnpkg.com/@homerjam/ace-dev-webpack/-/ace-dev-webpack-1.0.0-beta.1.tgz#8868874f2b54024a7515725f4a044070745f467f"
+  integrity sha512-DIjr3BSaMARdzwqWrZsM6qGT1v/lfD10c/E5yEAK3vt5FBM5Ot82iWkLALrx/MMuwNpNx0sIDkUB+ZcSqhLYbg==
   dependencies:
     "@babel/core" "^8.0.9"
     "@babel/plugin-transform-arrow-functions" "^8.0.1"
