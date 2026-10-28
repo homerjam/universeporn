@@ -1,7 +1,7 @@
 const path = require('path');
-const AceApp = require('@homerjam/ace-app-webpack');
+const { app: createApp, listen } = require('@homerjam/ace-app-webpack');
 
-AceApp.app({
+const app = createApp({
   version: require('./package.json').version,
   banner: 'ascii-banner',
   siteTitle: 'Universe Porn',
@@ -29,3 +29,7 @@ AceApp.app({
   routesDir: path.resolve(__dirname, 'routes'),
   publicDir: path.resolve(__dirname, 'public'),
 });
+
+if (require.main === module) listen(app);
+
+module.exports = app;

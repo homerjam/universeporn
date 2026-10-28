@@ -5,21 +5,19 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "8.x",
-    "npm": "5.2.x"
+    "node": "22.x"
   },
   "scripts": {
-    "start": "nodemon index.js --ext js,html --watch routes --exec 'node -r dotenv/config'",
-    "dev": "gulp",
-    "deploy": "gulp build; gulp bump; git add --all; git commit --all --message \"deploy\"; git remote | xargs -L1 git push --all"
+    "start": "node --env-file-if-exists=.env index.js",
+    "build": "ace-dev build",
+    "dev": "ace-dev dev"
   },
   "dependencies": {
-    "@homerjam/ace-app-webpack": "^0.2.7",
-    "forever": "^0.15.3"
+    "@homerjam/ace-app-webpack": "^1.0.0-beta.0"
   },
   "devDependencies": {
     "@homerjam/ace-angular": "^0.4.1",
-    "@homerjam/ace-dev-webpack": "^0.2.4",
+    "@homerjam/ace-dev-webpack": "^1.0.0-beta.1",
     "angular": "^1.6.7",
     "angular-animate": "^1.6.7",
     "angular-columnify": "^0.1.20",
@@ -32,9 +30,7 @@
     "angular-touch": "^1.6.7",
     "angular-ui-router": "^0.4.3",
     "bourbon": "^4.3.4",
-    "dotenv": "^5.0.1",
     "eases": "^1.0.8",
-    "eslint-config-airbnb-base": "^12.1.0",
     "foundation-sites": "^6.4.3",
     "fscreen": "^1.0.2",
     "hamsterjs": "^1.1.2",
