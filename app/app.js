@@ -66,6 +66,8 @@ angular.module('app', [
     $locationProvider.html5Mode(true);
     // $urlRouterProvider.otherwise('/404');
     $urlRouterProvider.otherwise(($injector, $location) => {
+      // Sets prerender-status-code now: the prerenderer captures the page before the redirect
+      $injector.get('$rootScope').statusCode = 404;
       setTimeout(() => {
         window.location.href = '/404';
       }, 5000);
