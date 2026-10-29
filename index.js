@@ -2,7 +2,8 @@ const path = require('path');
 const { app: createApp, listen } = require('@homerjam/ace-app-webpack');
 
 const app = createApp({
-  version: require('./package.json').version,
+  // Cache-busts the bundle URLs: a new commit gets a new URL, no version bump needed
+  version: process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) || require('./package.json').version,
   banner: 'ascii-banner',
   siteTitle: 'Universe Porn',
   googleAnalyticsTrackingId: 'UA-55066881-30',
